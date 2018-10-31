@@ -1,2 +1,2 @@
-# Lab7
-Biostatistics1 - Lab7
+# Lab8
+Biostatistics1 - Lab8
