@@ -1,5 +1,5 @@
 ---
-title: "Activity7-Lab7"
+title: "Activity8-Lab8"
 author: "Taehoon Ha"
 date: "10/31/2018"
 output: 
