@@ -1,0 +1,111 @@
+Assignment Eight - Lab8
+================
+Taehoon Ha
+11/3/2018
+
+-   [Question 1.](#question-1.)
+-   [Question 2.](#question-2.)
+    -   [(1) Re-format the code according to the style guide.](#re-format-the-code-according-to-the-style-guide.)
+    -   [(2) Re-format and debug the function `find_runs` that finds consecutive ones in a given vector.](#re-format-and-debug-the-function-find_runs-that-finds-consecutive-ones-in-a-given-vector.)
+-   [Question 3.](#question-3.)
+
+### Question 1.
+
+Read Chapter 21 from "Advanced R" 2nd ed., H. Wickham.
+
+<br><br>
+
+### Question 2.
+
+Complete Problem 1 and Problem 2 from Activity 8 and submit your code to a GitHub repository.
+
+<br>
+
+#### (1) Re-format the code according to the style guide.
+
+``` r
+prime=function(n){ 
+if(n%%1!=0 | n<0){ 
+return (FALSE)
+}else if(n==1){
+    return (FALSE)
+}else if(n==2){
+    return (TRUE)
+    }else {
+        for(i in 2:(sqrt(n))){
+        if(n %% i==0){
+        return (FALSE)
+}
+}
+    return (TRUE)
+}
+}
+```
+
+``` r
+prime <- function(n) {
+    if (n%%1 != 0 | n < 0) {
+        return(FALSE)
+    } else if (n == 1) {
+        return(FALSE)
+    } else if (n == 2) {
+        return(TRUE)
+    } else {
+        for (i in 2:(sqrt(n))) {
+            if (n%%i == 0) {
+                return(FALSE)
+            }
+        }
+        return(TRUE)
+    }
+}
+```
+
+<br>
+
+#### (2) Re-format and debug the function `find_runs` that finds consecutive ones in a given vector.
+
+``` r
+find_runs <- function(x, k) {
+    n <- length(x)
+    runs <- NULL
+    for (i in 1:(n - k + 1)) {
+        if (all(x[i:(i + k - 1)] == 1)) 
+            runs <- c(runs, i)
+    }
+    return(runs)
+}
+
+find_runs(c(1, 0, 0, 1, 1, 0, 1, 1, 1), 2)
+```
+
+    ## [1] 4 7 8
+
+<br><br>
+
+### Question 3.
+
+Please debug the following function that should return a sorted vector in ascending order. For example, if the input for your function is the vector (3, 1, 2), then your function should return the vector (1, 2, 3). Please submit your code to the GitHub repository.
+
+``` r
+sort_vec <- function(x) {
+    
+    if (length(x) < 2) 
+        return(x)
+    
+    for (last in length(x):2) {
+        for (first in 1:(last - 1)) {
+            if (x[first] > x[first + 1]) {
+                temp <- x[first]
+                x[first] <- x[first + 1]
+                x[first + 1] <- temp
+            }
+        }
+    }
+    return(x)
+}
+
+sort_vec(c(3, 1, 2))
+```
+
+    ## [1] 1 2 3
