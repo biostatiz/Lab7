@@ -3,11 +3,11 @@ Assignment Eight - Lab8
 Taehoon Ha
 11/3/2018
 
--   [Question 1.](#question-1.)
--   [Question 2.](#question-2.)
+-   [Question 1.](#question-1)
+-   [Question 2.](#question-2)
     -   [(1) Re-format the code according to the style guide.](#re-format-the-code-according-to-the-style-guide.)
     -   [(2) Re-format and debug the function `find_runs` that finds consecutive ones in a given vector.](#re-format-and-debug-the-function-find_runs-that-finds-consecutive-ones-in-a-given-vector.)
--   [Question 3.](#question-3.)
+-   [Question 3.](#question-3)
 
 ### Question 1.
 
